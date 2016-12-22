@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule{% block meta_title %}{% endblock meta_title %}</title>
+    <meta name="description" value="Reservation schedule" />
+
+    <!-- Include Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+{#    <link  rel="stylesheet" type="text/css" href={% static "css/style.css" %} />#}
+
+</head>
+<body>
+
+    <!-- Start Container -->
+    <div class="container">
+
+        <!-- Start Header -->
+        <div class="row" id="header">
+
+            <!-- Logo -->
+            <div class="col-xs-8">
+                <h1><a href="#">Reservation schedule</a></h1>
+            </div>
+        </div>
+        <!-- End Header -->
+        <div>{% block main_content %}{% endblock main_content %}</div>
+    </div>
+    <!-- End Container -->
+
+    <!-- Start Footer -->
+        <div class="row" id="footer">
+            <div class="col-xs-12">
+                &copy; 2016 Meeting rooms schedule
+            </div>
+        </div>
+    <!-- End Footer -->
+
+    <!-- Javascripts Section -->
+{#    <script src={% static "js/script" %} type="text/javascript"></script>#}
+{#    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>#}
+
+</body>
+</html>
