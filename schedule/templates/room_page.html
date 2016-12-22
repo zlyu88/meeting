@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+
+{% block main_content %}
+
+<div class="col-xs-6" id="user-toolbar">
+    {% if user.image %}
+        <a href="#"><img height="30" class="img-circle"
+                         src="/media/{{ user.image }}"></a>
+    {% else %}
+        <img height="30" class="img-circle" src="/static/no_image.png">
+    {% endif %}
+    <a href="#">{{ user.name }}</a> |
+    <a href="/schedule/">log out</a>
+</div><br>
+<hr>
+<div>
+
+<h2>{{ room.color }}</h2>
+<h3>{{ room.description }}</h3>
+
+</div>
+
+{% endblock main_content %}
+
